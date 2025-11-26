@@ -1,10 +1,7 @@
-Absolutely — here is a **clean, professional, production-ready README** for your Docker project.
-
-You can copy–paste this directly into your repository.
 
 ---
 
-# 🚀 Full-Stack ChatApp — Docker Deployment Guide
+#  Full-Stack ChatApp — Docker Deployment
 
 This project is a complete **End-to-End Full Stack Chat Application** powered by:
 
