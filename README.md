@@ -1,12 +1,14 @@
-Hello This is my end to end docker project
 
+This is **invalid Markdown**, because:
 
+- Code blocks must start with **three backticks**, not two.
+- You wrote ``bash instead of ```bash.
 
-First of all set up this project locally 
+### ✅ Correct Markdown for README
 
+Use this:
 
-``bash
-
+<pre>
+```bash
 git clone https://github.com/AKASH-GPT-1678/Full_Stack_Chatapp.git
-
-```
+</pre>
