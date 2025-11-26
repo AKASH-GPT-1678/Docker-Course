@@ -1,6 +1,37 @@
 services:
+  frontend:
+    image: your-username/frontend   # update this
+    container_name: frontend
+    restart: always
+    ports:
+      - "5173:5173"   # Vite default OR your frontend runtime port
+    environment:
+      - VITE_BACKEND_ENDPOINT=http://backend:3000
+      - VITE_REDIS_URL=redis://redis:6379
+    depends_on:
+      - backend
+      - redis
+
+  backend:
+    image: your-username/backend   # update this
+    container_name: backend
+    restart: always
+    ports:
+      - "3000:3000"                # Backend API port
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - DATABASE_URL=postgresql://akash:gupta@postgres:5432/docker
+      - Email=YOUR_EMAIL
+      - Password=YOUR_PASSWORD
+      - JWT_SECRET=YOUR_JWT_SECRET
+      - NODE_ENV=development
+      - PORT=3000
+    depends_on:
+      - postgres
+      - redis
+
   postgres:
-    image: postgres
+    image: postgres:18
     container_name: postgres
     restart: always
     environment:
@@ -10,10 +41,10 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
-   
+      - postgres_data:/var/lib/postgresql  
+
   redis:
-    image: redis
+    image: redis:latest
     container_name: redis
     restart: always
     ports:
