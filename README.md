@@ -8,7 +8,6 @@ This is **invalid Markdown**, because:
 
 Use this:
 
-<pre>
 ```bash
 git clone https://github.com/AKASH-GPT-1678/Full_Stack_Chatapp.git
-</pre>
+```
