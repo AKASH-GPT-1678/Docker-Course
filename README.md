@@ -9,5 +9,6 @@ This is **invalid Markdown**, because:
 Use this:
 
 ```bash
-git clone https://github.com/AKASH-GPT-1678/Full_Stack_Chatapp.git
+git clone https://github.com/AKASH-GPT-1678/Docker-Course.git
 ```
+Now its time to setup your <code> docker-compose.yaml </code>
